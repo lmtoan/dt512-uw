@@ -2,7 +2,7 @@
 
 * Project Goal
 
-![](ts_plot.png)
+![](figs/ts_plot.png)
 
 * List the license of the source data and a link to the Wikimedia Foundation REST API terms of use: https://www.mediawiki.org/wiki/REST_API#Terms_and_conditions
 * Link to all relevant API documentation
