@@ -1,6 +1,6 @@
 # Assignment 1: Data Curation
 
-Part of [UW DT512](https://wiki.communitydata.cc/Human_Centered_Data_Science_(Fall_2018)/Assignments#A1:_Data_curation) class assignment.
+Part of [UW DT512](https://wiki.communitydata.cc/Human_Centered_Data_Science_(Fall_2018)/Assignments#A1:_Data_curation) class assignment. The 5 source .json files can be found in `data/`.
 
 * Goal
 
