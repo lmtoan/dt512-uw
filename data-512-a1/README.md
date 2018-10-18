@@ -31,5 +31,6 @@ After querying and processing the dataset, a time-series plot is obtained as bel
 
 * Known issues and special considerations include:
   * The Pageview API excludes spiders/crawlers while Legacy Pagecounts API does not.
+  * There was about 1 year of overlapping traffic data between the two APIs.
   * The Pageview API doesn't report exact figures of pageviews per country.
   
