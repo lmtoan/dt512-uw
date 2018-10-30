@@ -1,12 +1,22 @@
 # Assignment 1: Data Curation
 
-* Project Goal
+Part of [UW DT512](https://wiki.communitydata.cc/Human_Centered_Data_Science_(Fall_2018)/Assignments#A1:_Data_curation) class assignment. The 5 source .json files can be found in `data/`.
+
+* Goal
+
+The notebook `hcds-a1-data-curation.ipynb` aims to construct, analyze, and publish a dataset of monthly traffic on English Wikipedia from January 1 2008 through September 30 2018.
+
+After querying and processing the dataset, a time-series plot is obtained as below.
 
 ![](figs/ts_plot.png)
 
-* List the license of the source data and a link to the Wikimedia Foundation REST API terms of use: https://www.mediawiki.org/wiki/REST_API#Terms_and_conditions
-* Link to all relevant API documentation
-* Describe the values of all fields in your final data file.
+* License of the source data and terms of use for Wikimedia Foundation REST API can be found [here](https://www.mediawiki.org/wiki/REST_API#Terms_and_conditions)
+
+* Several APIs used in this repo include:
+  * The Legacy Pagecounts API ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts) and [endpoint](https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end)) provides access to desktop and mobile traffic data from December 2007 through July 2016.
+  * The Pageviews API ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews) and [endpoint](https://wikimedia.org/api/rest_v1/#!/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end)) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through September 2018.
+
+* The post-processed data is in the `en-wikipedia_traffic_200712-201809.csv` file with the following schema.
 
 | Column                  | Value     | Description                                                                                                               |
 |-------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------|
@@ -19,4 +29,8 @@
 | pageview_desktop_views  | num_views | Aggregate of pageview of desktop channel, given month-year between July 2015 to October 2018                              |
 | pageview_mobile_views   | num_views | Aggregate of pageview of mobile channels (mobile app and mobile site), given month-year between July 2015 to October 2018 |
 
-* List any known issues or special considerations with the data that would be useful for another researcher to know. For example, you should describe that data from the Pageview API excludes spiders/crawlers, while data from the Pagecounts API does not.
+* Known issues and special considerations include:
+  * The Pageview API excludes spiders/crawlers while Legacy Pagecounts API does not.
+  * There was about 1 year of overlapping traffic data between the two APIs.
+  * The Pageview API doesn't report exact figures of pageviews per country.
+  
