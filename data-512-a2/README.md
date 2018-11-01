@@ -150,7 +150,9 @@ The top 10 result has North Korea and Saudi Arabia at the top. I am very curious
 ## Resources
 This analysis was prepared using Python 3.5 running in a Jupyter Notebook environment.  
 Documentation for Python can be found here: https://docs.python.org/3.5/  
-Documentation for Jupyter Notebook can be found here: http://jupyter-notebook.readthedocs.io/en/latest/  
+Documentation for Jupyter Notebook can be found here: http://jupyter-notebook.readthedocs.io/en/latest/ 
+
+
 Packages
 - Pandas
 - Numpy
