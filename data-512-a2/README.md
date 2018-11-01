@@ -59,8 +59,9 @@ Sourced from the [2018 World Population Data Sheet](https://www.prb.org/2018-wor
 
 For the ORES ratings, the following information are quoted from https://en.wikipedia.org/wiki/Wikipedia:Content_assessment#Grades. Ratings are from Good to Bad.
 
+|Rating | Description |
+|-------|-------------|
 | FA    | "The article has attained featured article status by passing an in-depth examination by impartial reviewers"                             |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------|
 | A     | "The article is well organized and essentially complete, having been examined by impartial reviewers from a WikiProject or elsewhere."   |
 | GA    | "The article has attained good article status having been examined by one or more impartial reviewers from WP:Good article nominations." |
 | B     | "The article is mostly complete and without major problems, but requires some further work"                                              |
@@ -144,9 +145,6 @@ The top 10 result has North Korea and Saudi Arabia at the top. I am very curious
 | brazil       | 3                        | 551         | 0.544465          |
 | luxembourg   | 1                        | 180         | 0.555556          |
 | sierra leone | 1                        | 166         | 0.602410          |
-
-
-## Files
 
 
 ## Resources
