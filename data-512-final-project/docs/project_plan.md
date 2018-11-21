@@ -16,10 +16,11 @@ Data
 I will be using a combination of historic and year-to-date data that capture every shooting incident occured in New York City from 2013 to 2018. Their links are referenced below:
 - [NYPD Shooting Incident Data *(Historic)*](https://data.cityofnewyork.us/Public-Safety/NYPD-Shooting-Incident-Data-Historic-/833y-fsy8). Created on June 5, 2018. Last updated on November 8, 2018.
 - [NYPD Shooting Incident Data *(Year To Date)*](https://data.cityofnewyork.us/Public-Safety/NYPD-Shooting-Incident-Data-Year-To-Date-/5ucz-vwe8). Created on June 5, 2018. Last updated on November 8, 2018.
+- These datasets share the same [data footnote](https://data.cityofnewyork.us/api/views/833y-fsy8/files/e4e3d86c-348f-4a16-a17f-19480c089429?download=true&filename=NYPD_Shootings_Incident_Level_Data_Footnotes.pdf) which details variables creation methods, exceptions, filtering guidelines, and addresses any data abnormalies and inconsistencies.
 
-Reviewed by Office of Management Analysis and Planning and provided by New York Police Department, the data provide a comprehensive view about "the shooting event, the location and time of occurrence, and information related to suspect and victim demographics".
+Reviewed by Office of Management Analysis and Planning and provided by New York Police Department, the data provide a comprehensive view about "the shooting event, the location and time of occurrence, and information related to suspect and victim demographics". For the *Historic* dataset, there are 6,407 rows and 18 columns. For the *Year-to-date* dataset, there are 441 rows of similar 18 columns. I plan to merge these 2 datasets together since they have similar columns. These datasets are viewed more than 460 times and downloaded 75 times.
 
-Several limitations and potential biases are discussed in the following [section](### Limitations & Biases)
+Several limitations and potential biases are discussed in the following sections.
 
 ### License & Terms of Use
 
@@ -31,20 +32,23 @@ The datasets are hosted on [NYC Open Data](https://opendata.cityofnewyork.us/), 
 
 The rights to use the data for public research are mentioned in the umbrella [Terms of Use](https://opendata.cityofnewyork.us/overview/#termsofuse) and quoted below. There are no disclaimers or copyright exceptions to these datasets.
 
-> By accessing datasets and feeds available through NYC Open Data, the user agrees to all of the [Terms of Use](http://www1.nyc.gov/home/terms-of-use.page) of NYC.gov as well as the [Privacy Policy](http://www1.nyc.gov/home/privacy-policy.page)  for NYC.gov. The user also agrees to any additional terms of use  defined by the agencies, bureaus, and offices providing data. Public  data sets made available on NYC Open Data are provided for informational  purposes. The City does not warranty the completeness, accuracy,  content, or fitness for any particular purpose or use of any public data  set made available on NYC Open Data, nor are any such warranties to be  implied or inferred with respect to the public data sets furnished  therein.
+> By accessing datasets and feeds available through NYC Open Data, the user agrees to all of the [Terms of Use](http://www1.nyc.gov/home/terms-of-use.page) of NYC.gov as well as the [Privacy Policy](http://www1.nyc.gov/home/privacy-policy.page)  for NYC.gov. The user also agrees to any additional terms of use defined by the agencies, bureaus, and offices providing data. Public data sets made available on NYC Open Data are provided for informational  purposes. The City does not warranty the completeness, accuracy,  content, or fitness for any particular purpose or use of any public data  set made available on NYC Open Data, nor are any such warranties to be implied or inferred with respect to the public data sets furnished  therein.
 >
-> The City is not liable for any deficiencies in the completeness,  accuracy, content, or fitness for any particular purpose or use of any  public data set, or application utilizing such data set, provided by any  third party.
+> The City is not liable for any deficiencies in the completeness,  accuracy, content, or fitness for any particular purpose or use of any  public data set, or application utilizing such data set, provided by any third party.
 >
-> Submitting City Agencies are the authoritative source of data  available on NYC Open Data. These entities are responsible for data  quality and retain version control of data sets and feeds accessed on  the Site. Data may be updated, corrected, or refreshed at any time.
+> Submitting City Agencies are the authoritative source of data  available on NYC Open Data. These entities are responsible for data  quality and retain version control of data sets and feeds accessed on the Site. Data may be updated, corrected, or refreshed at any time.
 
 ### Limitations & Biases
 
-As stated in the dataset headers, the NYPD shooting incident data "is manually extracted every quarter and reviewed by the Office of Management Analysis and Planning before being posted on the NYPD website". Such scrutiny might result in excessive filtering of shooting incidents or metadata related to such incidents. Since the dataset
+As stated in the dataset headers, the NYPD shooting incident data "is manually extracted every quarter and reviewed by the Office of Management Analysis and Planning before being posted on the NYPD website". Such scrutiny might result in excessive filtering of shooting incidents or metadata related to such incidents. (Exclusion of non-injured shootings does not appropriately cover the extent of police state)
 
-There is no description of data de-identification
+> Only valid shooting incidents resulting in an injured victim are included in this release. Shooting incidents not resulting in an injured victim are classified according to the appropriate offense according to NYS Penal Law. 
 
-The authoring agencies state that the "data can be used by the public to explore the nature of shooting/criminal activity".
+There is no description of data de-identification process to protect individuals' privacies. Below is a one-line instruction quoted from the data footnote.
 
+> Any attempt to match the approximate location of the incident to an exact address or link to other datasets is not recommended.
+
+The authoring agencies state that the "data can be used by the public to explore the nature of shooting/criminal activity". Such description explicitly links police shootings with criminal activities. Because of such implicit biases, the datasets might not account for wrongful police shootings and other verbal and physical threats against minorities and communities at harm.
 
 ### Schema
 
@@ -73,21 +77,23 @@ Research Questions
 
 ### Q1
 
-**Deliverables**
+*Hypothesis*
+
+*Deliverables & Use Cases*
 
 < Use case>
 
 ### Q2
 
-**Deliverables**
+*Hypothesis*
 
-< Use case>
+*Deliverables & Use Cases*
 
 ### Q3
 
-**Deliverables**
+*Hypothesis*
 
-< Use case>
+*Deliverables & Use Cases*
 
 Human-Centered Design Considerations
 ---
