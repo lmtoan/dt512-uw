@@ -5,4 +5,4 @@
 WIP
 
 Documentations:
-* [Project Plan](documentation/project_plan.md)
+* [Project Plan](docs/project_plan.md)
