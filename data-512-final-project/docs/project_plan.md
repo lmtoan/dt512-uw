@@ -6,7 +6,9 @@ As part of the final project plan assignment of [UW DT512 class](https://wiki.co
 
 Motivations
 ---
+As a foreign student living in the U.S. for less than 5 years, I have a limited understanding of the complex relationship between law enforcement officers and the public they are tasked to protect. Never had a serious interaction with the police, I am shocked by the news of Michael Brown's death that led to the unrest in Ferguson and fascinated by the formation of the Black Lives Matter movement. For the final project, I want to study the case of police brutality, how it varies among demographic groups, and how its extent changes over time. The project will equip me with more background knowledge about a powerful social change campaign and provide a human-centered application to the data science analyses.
 
+With the data sourced from NYC Open Data initiative, the project focuses on police shooting incidents that occured in New York City from 2013 to 2018. NYPD has a history of misconduct and discrimination against minorities, where "over 12,000 such cases have resulted in lawsuit settlements totalling over $400 million during a five-year period ending in 2014<sup>2</sup>". In the contrary, several reports state that NYPD "is the most restrained in the country"<sup>3</sup> and its officers "have shot fewer people than ever in 2017", only 18 people, compared those of Los Angeles (at 42) and Chicago (at 65) in the same year<sup>4</sup>. These contradicting reports suggest additional cautions on my part when analyzing the datasets maintained and provided by the NYPD itself. I am curious to investigate the most recent police shooting incident statistics to find out which narrative holds true.
 
 Data
 ---
@@ -40,15 +42,15 @@ The rights to use the data for public research are mentioned in the umbrella [Te
 
 ### Limitations & Biases
 
-As stated in the dataset headers, the NYPD shooting incident data "is manually extracted every quarter and reviewed by the Office of Management Analysis and Planning before being posted on the NYPD website". Such scrutiny might result in excessive filtering of shooting incidents or metadata related to such incidents. (Exclusion of non-injured shootings does not appropriately cover the extent of police state)
+As stated in the dataset headers, the NYPD shooting incident data "is manually extracted every quarter and reviewed by the Office of Management Analysis and Planning before being posted on the NYPD website". Such scrutiny might result in excessive filtering of shooting incidents or metadata related to such incidents. Below is a quote from the data footnote that indicates the exclusion of non-injured police shootings. Omitting the non-injured shootings or gunpoint threats might under-estimate the impacts of NYPD historic patterns of excessive policing minorities. 
 
 > Only valid shooting incidents resulting in an injured victim are included in this release. Shooting incidents not resulting in an injured victim are classified according to the appropriate offense according to NYS Penal Law. 
 
-There is no description of data de-identification process to protect individuals' privacies. Below is a one-line instruction quoted from the data footnote.
+There is no description of data de-identification process to protect individuals' privacies. Below is a one-line instruction quoted from the data footnote, which should have been a standardized process given GDPR regulations.
 
 > Any attempt to match the approximate location of the incident to an exact address or link to other datasets is not recommended.
 
-The authoring agencies state that the "data can be used by the public to explore the nature of shooting/criminal activity". Such description explicitly links police shootings with criminal activities. Because of such implicit biases, the datasets might not account for wrongful police shootings and other verbal and physical threats against minorities and communities at harm.
+The authoring agencies state that the *"data can be used by the public to explore the nature of shooting/criminal activity"*. Such description explicitly links police shootings with criminal activities. Because of such implicit biases, the datasets might not account for wrongful police shootings and other verbal and physical threats against minorities and communities at harm.
 
 ### Schema
 
@@ -75,44 +77,74 @@ The authoring agencies state that the "data can be used by the public to explore
 Research Questions
 ---
 
-### Q1
+### Police shooting trends from 2013-2018
 
-*Hypothesis*
+*Questions*
+- Have there been more or less police shootings in NYC after Trump's election in November 2016?
+- Are there any correlation between notable police protests and the number of police shootings?
 
-*Deliverables & Use Cases*
-
-< Use case>
-
-### Q2
-
-*Hypothesis*
-
-*Deliverables & Use Cases*
-
-### Q3
-
-*Hypothesis*
+*Hypotheses*
+- After Trump's election, there have been controversial calls from the administration for more "law and order" and heavy policing state. My inkling is that there will be
+more police shootings because the police might become more hostile with traditionally suppressed communities.
+- Over the past 5 years, NYPD has been responsible for several wrongful deaths, most notably of Eric Garner (7/17/2014) and of Akai Gurley (11/20/2014). These deaths are often followed by series of police protests. I want to explore if the public resentment toward excessive policing might result in more hostility from the police forces? An increasing number of police shooting incidents before and after key protest dates might suggest some correlation. I plan to do additional research to retrieve the key protest dates.
 
 *Deliverables & Use Cases*
+- The main deliverables for this section will be a statistical analysis to compare the average number of police shootings, before and after a certain key date. Similar to A/B testing techniques, a simple average calculation and t-test might do the job.
+- The analysis might be useful to journalists and human rights organizations to further their calls to protect at-risk communities against excessive policing. Any statistically significant result might motivate NYPD to revise their operations and training regimes to properly protect its residents despite the recent divisive political climate.
+
+
+### Police shooting locations visualization
+
+*Questions*
+- Are police shooting incidents concentrated in any geographical area in NYC? 
+
+*Hypotheses*
+- I would like to verify the common perception that there are more police shootings in areas in NYC that have low median incomes and high crime rates.
+
+*Deliverables & Use Cases*
+- The main deliverable is a geographical map plot (given the longtitude and latitude data) to show the distribution of police shooting incidents in NYC. From that, I want to select the top 10 areas with the highest number of police shootings.
+- For each area, I want to map the area's demographics and other metadata to gain a better understanding of why there is a high concentration of police shooting incidents.
+- The visualization and additional demographics analysis might alert journalists, NYPD, and lawmakers for any potential discriminations.
+
+### Correlations between demographic factors of perpetrators and victims
+
+*Questions*
+- Are there any trends in gender, race, age group of perpetrators and victims?
+- Do those trends change over the span of 5 years and observe any significant shifts after significant events?
+- How do the missing values affect the integrity of demographic analyses?
+
+*Hypothesis*
+- In recent news, minorities, especially those of Black and Hispanic groups, tend to be under threats of wrongful police shootings, even if they commit a crime or not. I am curious if there are variations in the number of police shootings among males/females and different age groups.
+- The datasets provide demographic information of both perpetrators and victims. However, many rows have missing values of perpetrators or victims demographics. I would like to study how NYPD treats these missing values in their reports and identify any potential biases.
+
+*Deliverables & Use Cases*
+- The deliverable is a group-by count of the number of police shootings associated with each demographic group. I also want to perform a time-trend analysis on these statistics. Any signifcant shift can signal journalists, NYPD, and law-makers about their operations and identify any potential discrimination toward a demographic group.
 
 Human-Centered Design Considerations
 ---
-<Vietnamese foreigner, never had an interaction with police, not threatened ethnic group or income class>
 
-<Democratic-leaning, upset with the influx of news about police shootings, more likely to find evidences to criticize police shootings>
-
-<Sensitive results, heavily biased, should take into considerations, only applied to New York City. Statistics might be widely different from other less tech-savvy states>
+I would like to acknowledge several personal biases that might interfere with the formation of my research questions, treatment of the datasets, and subsequent data analyses.
+- As a foreigner with certain privileges, I never had an interaction with the police (except parking enforcement officers) and does not belong to demographic groups that typically suffer from police brutality. As the result, my analyses might not account for the complexities of the relationship between NYPD and its residents. Any calculations or speculations about NYPD operations or behaviors might be stated with limited knowledge and without first-hand experience.
+- I often find myself in constant news influx of wrongful police shootings and police brutality. As a liberal-leaning person, I am more likely to seek out negative evidences against NYPD operations in my statistical analyses.
+- Any statistical results from the NYC Open Data datasets are only applied to New York City. Such results are not representative of the United States population and their relationships with law enforcement forces. As an ethical data scientist, I need to warn news outlets and political organizations not to extrapolate these results about police shootings, to their own states and cities.
 
 Tools
 ---
 
+I plan to use several Python packages to aid my data wrangling, statistical analyses, and geographical visualization. All packages are open-sourced and free for use.
+
 Analysis
-- Python
-- Pandas
+- Python 3.6
+- Pandas/Numpy
+- Jupyter Notebook
 
 Visualization
 - Matplotlib
-- Geographical visualization packages
+- Folium
 
 Sources
 ---
+1. https://opendata.cityofnewyork.us/
+2. https://en.wikipedia.org/wiki/New_York_City_Police_Department_corruption_and_misconduct
+3. https://www.nytimes.com/2008/05/08/nyregion/08nypd.html
+4. https://www.newsweek.com/nypd-officers-shot-lowest-number-people-ever-2017-758205
